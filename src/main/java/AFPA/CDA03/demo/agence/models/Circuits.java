@@ -5,31 +5,40 @@
  */
 package AFPA.CDA03.demo.agence.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import org.springframework.data.annotation.Id;
+
 /**
  *
  * @author Acer
  */
-public class Circuit {
-    private int id;
-    private String nom;
+@Entity
+public class Circuits {
+    
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @javax.persistence.Id
+    private int idCircuits;
+    private String nomCircuit;
     private String pays;
-    public Circuit() { }
-    public Circuit(int id, String nom, String pays) {
-        this.id = id;
-        this.nom = nom;
+    public Circuits() { }
+    public Circuits(int id, String nom, String pays) {
+        this.idCircuits = id;
+        this.nomCircuit = nom;
         this.pays = pays;
     } 
     public int getId() { 
-        return id;
+        return idCircuits;
     }
     public void setId(int id) { 
-        this.id = id;
+        this.idCircuits = id;
     } 
     public String getNom() {
-        return nom; 
+        return nomCircuit; 
     }
     public void setNom(String nom) {
-        this.nom = nom;
+        this.nomCircuit = nom;
     }
     public String getPays() { 
         return pays; 
@@ -39,6 +48,6 @@ public class Circuit {
     }
     @Override
     public String toString() { 
-        return "Circuit{" + "id=" + id + ", nom='" + nom + '\'' + ","
+        return "Circuit{" + "id=" + idCircuits + ", nom='" + nomCircuit + '\'' + ","
                 + " pays='" + pays + '\'' + '}'; }
 }
