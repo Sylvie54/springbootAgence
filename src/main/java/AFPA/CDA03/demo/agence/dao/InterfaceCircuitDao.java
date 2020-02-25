@@ -19,7 +19,7 @@ public interface InterfaceCircuitDao extends JpaRepository<Circuits, Integer> {
     // liste des Circuits dont le pays contient recherche
     List<Circuits> findByPaysLike(String recherche);
     // recherche des Circuits dont le nom de circuit est nom
-    List<Circuits> findByNomCircuit (String nom);
+    List<Circuits> findByNom (String nom);
     
     Circuits findById(int id);
     //Circuit save(Circuits c);

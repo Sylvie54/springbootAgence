@@ -19,12 +19,12 @@ public class Circuits {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @javax.persistence.Id
     private int id;
-    private String nomCircuit;
+    private String nom;
     private String pays;
     public Circuits() { }
     public Circuits(int id, String nom, String pays) {
         this.id = id;
-        this.nomCircuit = nom;
+        this.nom = nom;
         this.pays = pays;
     } 
     public int getId() { 
@@ -34,10 +34,10 @@ public class Circuits {
         this.id = id;
     } 
     public String getNom() {
-        return nomCircuit; 
+        return nom; 
     }
     public void setNom(String nom) {
-        this.nomCircuit = nom;
+        this.nom = nom;
     }
     public String getPays() { 
         return pays; 
@@ -47,7 +47,7 @@ public class Circuits {
     }
     @Override
     public String toString() { 
-        return "Circuit{" + "id=" + id + ", nom='" + nomCircuit + '\'' + ","
+        return "Circuit{" + "id=" + id + ", nom='" + nom + '\'' + ","
                 + " pays='" + pays + '\'' + '}'; }
 
 }
