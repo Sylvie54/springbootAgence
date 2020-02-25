@@ -16,23 +16,22 @@ import org.springframework.data.annotation.Id;
  */
 @Entity
 public class Circuits {
-    
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @javax.persistence.Id
-    private int idCircuits;
+    private int id;
     private String nomCircuit;
     private String pays;
     public Circuits() { }
     public Circuits(int id, String nom, String pays) {
-        this.idCircuits = id;
+        this.id = id;
         this.nomCircuit = nom;
         this.pays = pays;
     } 
     public int getId() { 
-        return idCircuits;
+        return id;
     }
     public void setId(int id) { 
-        this.idCircuits = id;
+        this.id = id;
     } 
     public String getNom() {
         return nomCircuit; 
@@ -48,6 +47,7 @@ public class Circuits {
     }
     @Override
     public String toString() { 
-        return "Circuit{" + "id=" + idCircuits + ", nom='" + nomCircuit + '\'' + ","
+        return "Circuit{" + "id=" + id + ", nom='" + nomCircuit + '\'' + ","
                 + " pays='" + pays + '\'' + '}'; }
+
 }
